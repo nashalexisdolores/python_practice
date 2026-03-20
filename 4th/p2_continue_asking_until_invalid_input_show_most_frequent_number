@@ -1,0 +1,11 @@
+user_numbers = []
+while True:
+    try:
+        user_input = int(input("Enter a number (or non-number to stop): "))
+        user_numbers.append(user_input)
+    except ValueError:
+        break
+
+if user_numbers:
+    most_common_number = max(set(user_numbers), key=user_numbers.count)
+    print("Number with most duplicates:", most_common_number)

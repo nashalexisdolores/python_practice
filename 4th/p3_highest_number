@@ -1,0 +1,10 @@
+numbers = []
+while True:
+    try:
+        num = int(input("Enter a number (or non-number to stop): "))
+        numbers.append(num)
+    except ValueError:
+        break
+
+if numbers:
+    print("Highest number:", max(numbers))
